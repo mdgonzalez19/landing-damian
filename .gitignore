@@ -1,0 +1,11 @@
+# Ignorar dependencias
+node_modules/
+dist/
+
+# Ignorar configuraciones de sistema
+.DS_Store
+.env
+*.log
+
+# Astro build output
+.cache/
