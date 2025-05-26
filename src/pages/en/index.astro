@@ -4,17 +4,39 @@ const { name, bio, services, techStack, social } = en;
 ---
 
 <html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{name}</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <script>
-      window.addEventListener('DOMContentLoaded', () => {
-        window.scrollTo(0, 0);
-      });
-    </script>
-  </head>
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- TITLE y META DESCRIPTION -->
+  <title>{name} | Product Manager en productos financieros digitales</title>
+  <meta name="description" content={bio} />
+
+  <!-- Open Graph (para redes sociales) -->
+  <meta property="og:title" content="{name} | Product Manager en productos financieros digitales" />
+  <meta property="og:description" content={bio} />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://marcosdamiangonzalez.ar/" />
+  <!-- Opcional: si tenés una imagen representativa -->
+  <!-- <meta property="og:image" content="https://marcosdamiangonzalez.ar/preview.png" /> -->
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="{name} | Product Manager en productos financieros digitales" />
+  <meta name="twitter:description" content={bio} />
+  <!-- <meta name="twitter:image" content="https://marcosdamiangonzalez.ar/preview.png" /> -->
+
+  <!-- Estilos -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <!-- JS para volver al top -->
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      window.scrollTo(0, 0);
+    });
+  </script>
+</head>
+
   <body class="bg-black text-gray-200 font-mono px-4 py-12 flex flex-col items-center space-y-12 relative">
 
     <!-- LANGUAGE SWITCH -->
