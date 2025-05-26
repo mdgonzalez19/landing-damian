@@ -1,13 +1,6 @@
 ---
 import es from '../data/config.es.json';
-const name = "Marcos Damián González";
-const bio = "Convierto datos y proyectos en decisiones claras. Como Product Manager, ayudo a empresas a construir productos financieros digitales con impacto: gestionando equipos, optimizando procesos y diseñando soluciones simples, escalables y rentables.";
-const services = [
-  "Diseño de productos financieros a medida",
-  "Optimización de flujos digitales existentes",
-  "Consultoría en automatización y toma de decisiones"
-];
-const social = es.social;
+const { name, bio, services, techStack, social } = es;
 ---
 
 <html lang="es" class="scroll-smooth">
@@ -16,7 +9,7 @@ const social = es.social;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{name}</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-       <script>
+    <script>
       window.addEventListener('DOMContentLoaded', () => {
         window.scrollTo(0, 0);
       });
@@ -24,12 +17,12 @@ const social = es.social;
   </head>
   <body class="bg-black text-gray-200 font-mono px-4 py-12 flex flex-col items-center space-y-12 relative">
 
-    <!-- SWITCH DE IDIOMA -->
+    <!-- LANGUAGE SWITCH -->
     <div class="fixed top-4 right-4 z-10">
-      <a href="/en" class="text-xs text-gray-400 hover:text-white border border-gray-600 px-2 py-1 rounded transition">EN</a>
+      <a href="/en" onclick="window.scrollTo(0, 0);" class="text-xs text-gray-400 hover:text-white border border-gray-600 px-2 py-1 rounded transition">EN</a>
     </div>
 
-    <!-- LOGO + NOMBRE -->
+    <!-- LOGO + NAME -->
     <section class="text-center space-y-2">
       <svg class="w-10 h-10 mx-auto mb-3 text-white" fill="currentColor" viewBox="0 0 24 24">
         <path d="M3 17h2v-7h2v7h2v-5h2v5h2v-3h2v3h2v-1h2v1h2v2H3v-2z" />
@@ -43,25 +36,40 @@ const social = es.social;
       <p>{bio}</p>
     </section>
 
-    <!-- SERVICIOS COMO TARJETAS -->
-    <section class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-md w-full">
-      {services.map(service => (
-        <div class="border border-gray-700 rounded-xl p-4 bg-gray-800 hover:bg-gray-700 shadow-md hover:shadow-lg transition text-sm font-medium text-center">
-          {service}
-        </div>
-      ))}
+    <!-- SERVICES -->
+    <section class="max-w-md w-full">
+      <h2 class="text-center text-sm text-gray-400 pt-6 pb-2 uppercase tracking-wide">Servicios que ofrezco</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        {services.map(service => (
+          <div class="border border-gray-700 rounded-xl p-4 bg-gray-800 hover:bg-gray-700 shadow-md hover:shadow-lg transition text-sm font-medium text-center">
+            {service}
+          </div>
+        ))}
+      </div>
     </section>
 
-    <!-- REDES SOCIALES CON ICONOS -->
+    <!-- TECH STACK -->
+    <section class="max-w-md w-full">
+      <h2 class="text-center text-sm text-gray-400 pt-6 pb-2 uppercase tracking-wide">Tecnologías con las que trabajo</h2>
+      <ul class="flex justify-center flex-wrap gap-4 pt-2">
+        {techStack.map(tool => (
+          <li>
+            <img src={`https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/${tool}.svg`} alt={tool} class="w-6 h-6" style="filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg);" />
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <!-- SOCIAL LINKS -->
     <section class="flex justify-center space-x-6 pt-4">
       <a href={social.whatsapp} target="_blank" class="hover:scale-110 transition-transform">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg" alt="WhatsApp" class="w-6 h-6" style="filter: invert(48%) sepia(83%) saturate(1391%) hue-rotate(74deg);">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg" alt="WhatsApp" class="w-6 h-6" style="filter: invert(48%) sepia(83%) saturate(1391%) hue-rotate(74deg);" />
       </a>
       <a href={social.instagram} target="_blank" class="hover:scale-110 transition-transform">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram" class="w-6 h-6" style="filter: invert(33%) sepia(100%) saturate(500%) hue-rotate(315deg);">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram" class="w-6 h-6" style="filter: invert(33%) sepia(100%) saturate(500%) hue-rotate(315deg);" />
       </a>
       <a href={social.linkedin} target="_blank" class="hover:scale-110 transition-transform">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn" class="w-6 h-6" style="filter: invert(50%) sepia(100%) saturate(1000%) hue-rotate(180deg);">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn" class="w-6 h-6" style="filter: invert(50%) sepia(100%) saturate(1000%) hue-rotate(180deg);" />
       </a>
     </section>
 

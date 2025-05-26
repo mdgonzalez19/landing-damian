@@ -1,10 +1,18 @@
 {
   "name": "Marcos Damián González",
-  "bio": "Product Owner especializado en productos financieros digitales. Me enfoco en liderar equipos ágiles, transformar datos en decisiones y construir soluciones claras para las personas.",
+  "bio": "Convierto datos y proyectos en decisiones claras. Como Product Manager, ayudo a empresas a construir productos financieros digitales con impacto: gestionando equipos, optimizando procesos y diseñando soluciones simples, escalables y rentables.",
   "services": [
-    "Diseño de productos financieros",
-    "Optimización de flujos digitales",
-    "Análisis de negocio y automatizaciones"
+    "Diseño de productos financieros a medida",
+    "Optimización de flujos digitales existentes",
+    "Consultoría en automatización y toma de decisiones"
+  ],
+  "techStack": [
+    "jira",
+    "confluence",
+    "microsoftsqlserver",
+    "powerbi",
+    "python",
+    "figma"
   ],
   "social": {
     "whatsapp": "https://wa.me/5492920445362",

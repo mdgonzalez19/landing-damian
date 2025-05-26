@@ -1,13 +1,6 @@
 ---
 import en from '../../data/config.en.json';
-const name = "Marcos Damián González";
-const bio = "I turn data and ideas into clear decisions. As a Product Manager, I help companies build impactful digital financial products — leading teams, optimizing processes, and designing solutions that are simple, scalable, and effective.";
-const services = [
-  "Custom financial product design",
-  "Optimization of existing digital flows",
-  "Automation and decision-making consulting"
-];
-const social = en.social;
+const { name, bio, services, techStack, social } = en;
 ---
 
 <html lang="en" class="scroll-smooth">
@@ -26,7 +19,7 @@ const social = en.social;
 
     <!-- LANGUAGE SWITCH -->
     <div class="fixed top-4 right-4 z-10">
-      <a href="/" onclick="window.scrollTo(0, 0);" class="text-xs text-gray-400 hover:text-white border border-gray-600 px-2 py-1 rounded transition">ES</a>
+      <a href="/en" onclick="window.scrollTo(0, 0);" class="text-xs text-gray-400 hover:text-white border border-gray-600 px-2 py-1 rounded transition">EN</a>
     </div>
 
     <!-- LOGO + NAME -->
@@ -43,13 +36,28 @@ const social = en.social;
       <p>{bio}</p>
     </section>
 
-    <!-- SERVICES AS CARDS -->
-    <section class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-md w-full">
-      {services.map(service => (
-        <div class="border border-gray-700 rounded-xl p-4 bg-gray-800 hover:bg-gray-700 shadow-md hover:shadow-lg transition text-sm font-medium text-center">
-          {service}
-        </div>
-      ))}
+    <!-- SERVICES -->
+    <section class="max-w-md w-full">
+      <h2 class="text-center text-sm text-gray-400 pt-6 pb-2 uppercase tracking-wide">Services Offered</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        {services.map(service => (
+          <div class="border border-gray-700 rounded-xl p-4 bg-gray-800 hover:bg-gray-700 shadow-md hover:shadow-lg transition text-sm font-medium text-center">
+            {service}
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- TECH STACK -->
+    <section class="max-w-md w-full">
+      <h2 class="text-center text-sm text-gray-400 pt-6 pb-2 uppercase tracking-wide">Technologies I Work With</h2>
+      <ul class="flex justify-center flex-wrap gap-4 pt-2">
+        {techStack.map(tool => (
+          <li>
+            <img src={`https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/${tool}.svg`} alt={tool} class="w-6 h-6" style="filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg);" />
+          </li>
+        ))}
+      </ul>
     </section>
 
     <!-- SOCIAL LINKS WITH ICONS -->

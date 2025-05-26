@@ -1,10 +1,18 @@
 {
   "name": "Marcos Damian Gonzalez",
-  "bio": "Product Owner specialized in digital financial products. I lead agile teams, transform data into decisions, and build clear solutions for people.",
+  "bio": "I turn data and projects into clear decisions. As a Product Manager, I help companies build impactful digital financial products by leading teams, optimizing processes, and designing simple, scalable, and effective solutions.",
   "services": [
-    "Design of financial products",
-    "Optimization of digital flows",
-    "Business analysis and automations"
+    "Tailored design of financial products",
+    "Optimization of existing digital flows",
+    "Consulting in automation and decision-making"
+  ],
+    "techStack": [
+    "jira",
+    "confluence",
+    "microsoftsqlserver",
+    "powerbi",
+    "python",
+    "figma"
   ],
   "social": {
     "whatsapp": "https://wa.me/5492920445362",
