@@ -1,99 +1,171 @@
 ---
-import en from '../../data/config.en.json';
+import en from "../../data/config.en.json";
 const { name, bio, services, techStack, social } = en;
 ---
 
 <html lang="en" class="scroll-smooth">
- <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- TITLE y META DESCRIPTION -->
-  <title>{name} | Product Manager en productos financieros digitales</title>
-  <meta name="description" content={bio} />
+    <!-- TITLE y META DESCRIPTION optimizados -->
+    <title>Product Manager en Finanzas | Marcos Damián</title>
+    <meta
+      name="description"
+      content="Ayudo a empresas a construir productos financieros digitales con impacto: liderando equipos ágiles, optimizando procesos y creando soluciones escalables."
+    />
 
-  <!-- Open Graph (para redes sociales) -->
-  <meta property="og:title" content="{name} | Product Manager en productos financieros digitales" />
-  <meta property="og:description" content={bio} />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://marcosdamiangonzalez.ar/" />
-  <!-- Opcional: si tenés una imagen representativa -->
-  <!-- <meta property="og:image" content="https://marcosdamiangonzalez.ar/preview.png" /> -->
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="Product Manager en Finanzas | Marcos Damián"
+    />
+    <meta
+      property="og:description"
+      content="Ayudo a empresas a construir productos financieros digitales con impacto: liderando equipos ágiles, optimizando procesos y creando soluciones escalables."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://marcosdamiangonzalez.ar/" />
+    <!-- <meta property="og:image" content="https://marcosdamiangonzalez.ar/preview.png" /> -->
 
-  <!-- Twitter Cards -->
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="{name} | Product Manager en productos financieros digitales" />
-  <meta name="twitter:description" content={bio} />
-  <!-- <meta name="twitter:image" content="https://marcosdamiangonzalez.ar/preview.png" /> -->
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary" />
+    <meta
+      name="twitter:title"
+      content="Product Manager en Finanzas | Marcos Damián"
+    />
+    <meta
+      name="twitter:description"
+      content="Ayudo a empresas a construir productos financieros digitales con impacto: liderando equipos ágiles, optimizando procesos y creando soluciones escalables."
+    />
+    <!-- <meta name="twitter:image" content="https://marcosdamiangonzalez.ar/preview.png" /> -->
 
-  <!-- Estilos -->
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Estilos -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
 
-  <!-- JS para volver al top -->
-  <script>
-    window.addEventListener('DOMContentLoaded', () => {
-      window.scrollTo(0, 0);
-    });
-  </script>
-</head>
+    <!-- JS para volver al top -->
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        window.scrollTo(0, 0);
+      });
+    </script>
+  </head>
 
-  <body class="bg-black text-gray-200 font-mono px-4 py-12 flex flex-col items-center space-y-12 relative">
-
+  <body
+    class="bg-black text-gray-200 font-mono px-4 py-12 flex flex-col items-center space-y-12 relative"
+  >
     <!-- LANGUAGE SWITCH -->
     <div class="fixed top-4 right-4 z-10">
-        <a href="/" onclick="window.scrollTo(0, 0);" class="text-xs text-gray-400 hover:text-white border border-gray-600 px-2 py-1 rounded transition">ES</a>
+      <a
+        href="/"
+        onclick="window.scrollTo(0, 0);"
+        class="text-xs text-gray-400 hover:text-white border border-gray-600 px-2 py-1 rounded transition"
+        >ES</a
+      >
     </div>
 
     <!-- LOGO + NAME -->
     <section class="text-center space-y-2">
-      <svg class="w-10 h-10 mx-auto mb-3 text-white" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M3 17h2v-7h2v7h2v-5h2v5h2v-3h2v3h2v-1h2v1h2v2H3v-2z" />
+      <svg
+        class="w-10 h-10 mx-auto mb-3 text-white"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path d="M3 17h2v-7h2v7h2v-5h2v5h2v-3h2v3h2v-1h2v1h2v2H3v-2z"></path>
       </svg>
       <h1 class="text-3xl font-bold tracking-wide">{name}</h1>
       <p class="text-sm text-gray-400">Product Manager</p>
     </section>
 
     <!-- ABOUT ME -->
-    <section class="max-w-sm mx-auto text-center text-sm leading-relaxed text-gray-300">
+    <section
+      class="max-w-sm mx-auto text-center text-sm leading-relaxed text-gray-300"
+    >
       <p>{bio}</p>
     </section>
 
     <!-- SERVICES -->
     <section class="max-w-md w-full">
-      <h2 class="text-center text-sm text-gray-400 pt-6 pb-2 uppercase tracking-wide">Services Offered</h2>
+      <h2
+        class="text-center text-sm text-gray-400 pt-6 pb-2 uppercase tracking-wide"
+      >
+        Services Offered
+      </h2>
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-        {services.map(service => (
-          <div class="border border-gray-700 rounded-xl p-4 bg-gray-800 hover:bg-gray-700 shadow-md hover:shadow-lg transition text-sm font-medium text-center">
-            {service}
-          </div>
-        ))}
+        {
+          services.map((service) => (
+            <div class="border border-gray-700 rounded-xl p-4 bg-gray-800 hover:bg-gray-700 shadow-md hover:shadow-lg transition text-sm font-medium text-center">
+              {service}
+            </div>
+          ))
+        }
       </div>
     </section>
 
     <!-- TECH STACK -->
     <section class="max-w-md w-full">
-      <h2 class="text-center text-sm text-gray-400 pt-6 pb-2 uppercase tracking-wide">Technologies I Work With</h2>
+      <h2
+        class="text-center text-sm text-gray-400 pt-6 pb-2 uppercase tracking-wide"
+      >
+        Technologies I Work With
+      </h2>
       <ul class="flex justify-center flex-wrap gap-4 pt-2">
-        {techStack.map(tool => (
-          <li>
-            <img src={`https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/${tool}.svg`} alt={tool} class="w-6 h-6" style="filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg);" />
-          </li>
-        ))}
+        {
+          techStack.map((tool) => (
+            <li>
+              <img
+                src={`https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/${tool}.svg`}
+                alt={tool}
+                class="w-6 h-6"
+                style="filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg);"
+              />
+            </li>
+          ))
+        }
       </ul>
     </section>
 
     <!-- SOCIAL LINKS WITH ICONS -->
     <section class="flex justify-center space-x-6 pt-4">
-      <a href={social.whatsapp} target="_blank" class="hover:scale-110 transition-transform">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg" alt="WhatsApp" class="w-6 h-6" style="filter: invert(48%) sepia(83%) saturate(1391%) hue-rotate(74deg);">
+      <a
+        href={social.whatsapp}
+        target="_blank"
+        class="hover:scale-110 transition-transform"
+      >
+        <img
+          src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg"
+          alt="WhatsApp"
+          class="w-6 h-6"
+          style="filter: invert(48%) sepia(83%) saturate(1391%) hue-rotate(74deg);"
+        />
       </a>
-      <a href={social.instagram} target="_blank" class="hover:scale-110 transition-transform">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram" class="w-6 h-6" style="filter: invert(33%) sepia(100%) saturate(500%) hue-rotate(315deg);">
+      <a
+        href={social.instagram}
+        target="_blank"
+        class="hover:scale-110 transition-transform"
+      >
+        <img
+          src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg"
+          alt="Instagram"
+          class="w-6 h-6"
+          style="filter: invert(33%) sepia(100%) saturate(500%) hue-rotate(315deg);"
+        />
       </a>
-      <a href={social.linkedin} target="_blank" class="hover:scale-110 transition-transform">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn" class="w-6 h-6" style="filter: invert(50%) sepia(100%) saturate(1000%) hue-rotate(180deg);">
+      <a
+        href={social.linkedin}
+        target="_blank"
+        class="hover:scale-110 transition-transform"
+      >
+        <img
+          src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg"
+          alt="LinkedIn"
+          class="w-6 h-6"
+          style="filter: invert(50%) sepia(100%) saturate(1000%) hue-rotate(180deg);"
+        />
       </a>
     </section>
-
   </body>
 </html>
